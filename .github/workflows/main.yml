@@ -1,0 +1,19 @@
+name: hello day la test #tên quy trình 
+
+on:
+  push:
+    branches: ["main"] #chạy khi code mới chạy lên nhánh main
+
+jobs:
+  thuc_hanh_doc_file:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Bước một - xinh chao
+        run: echo "hello world" #lệnh in ra màng hình
+
+      - name: Bước hai - tải code
+        uses: actions/checkout@v6.0.2 #robbit tự động copy code vào máy ảo 
+
+      - name: Bước ba - đọc file 
+        run: cat README.md #mở file README.md để xem
